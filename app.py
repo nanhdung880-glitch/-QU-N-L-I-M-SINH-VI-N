@@ -26,16 +26,16 @@ df["Tổng kết"] = (
     + 0.5 * df["Điểm cuối kỳ"]
 ).round(2)
 
-def xep_loai(Điểm):
-    if Điểm >= 8.5:
+def xep_loai(diem):
+    if diem >= 8.5:
         return "Giỏi"
-    elif Điểm >= 7:
+    elif diem >= 7:
         return "Khá"
-    elif Điểm >= 5:
+    elif diem >= 5:
         return "Trung bình"
     return "Yếu"
 
-df["Xếp loại"] = df["Tổng kết"].apply(xếp loại)
+df["Xếp loại"] = df["Tổng kết"].apply(xep_loai)
 
 st.subheader("Bảng điểm sinh viên")
 st.dataframe(df, use_container_width=True)
