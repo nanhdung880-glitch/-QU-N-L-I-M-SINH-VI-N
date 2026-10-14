@@ -41,7 +41,7 @@ st.subheader("Bảng điểm sinh viên")
 st.dataframe(df, use_container_width=True)
 
 st.subheader("Thống kê")
-st.metric("Điểm trung bình", f"{df['Tong_ket'].mean():.2f}")
+st.metric("Điểm trung bình", f"{df['Tổng kết'].mean():.2f}")
 
 sv_max = df.loc[df["Tổng kết"].idxmax()]
 sv_min = df.loc[df["Tổng kết"].idxmin()]
